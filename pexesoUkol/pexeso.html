@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: green;">
+        GeeksforGeeks
+    </h1>
+     
+    <h1>Display Images from Array using a Loop</h1>
+     
+    <div id="image-container"></div>
+     
+
+    
+    <script>
+        const images = [
+'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg',
+'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg',
+'https://media.geeksforgeeks.org/wp-content/uploads/20230306120634/unnamed.jpg'
+        ];
+     
+        const container = document.getElementById('image-container');
+     
+        for (let i = 0; i < images.length; i++) {
+            const img = document.createElement('img');
+            img.src = images[i];
+            img.onclick = vyberPexeso(img);
+            container.appendChild(img);
+        }
+
+        function vyberPexeso(img){
+            img.src = "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT4a1vJNDA2Ix7boZ0th8kRQQH4s0n9GaWCyTg0GZnCdb34s9BfUqizsRq9SsBHdcqyXOfcVCTdJ8UQhVAFqYyjObtISXzLPNOyno5EmuS4Wx3QZgGLe56JJHU"
+        }
+    </script>
+</body>
+
+</html>
